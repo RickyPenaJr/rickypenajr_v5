@@ -1,0 +1,2097 @@
+/* ==========================================================================
+   Table of Contents
+   1. Imports
+   2. Variables
+   3. Base Styles
+   4. Layout
+   5. Typography
+   6. Header & Navigation
+   7. Main Content Sections
+   8. Footer
+   9. Utility Classes
+   10. Animations
+   11. Media Queries
+   12. Interactive Elements
+   ========================================================================== */
+
+/* 1. Imports
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* 2. Variables
+   ========================================================================== */
+:root {
+    --accent-color: rgb(34, 171, 221);
+    --bg-color: rgba(249, 249, 249, 0.98);
+    --text-color: #f6f6f6;
+    --card-bg: #2d2d2d;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --header-height: 6rem;
+    --footer-height: 6rem;
+    --button-gradient: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
+    --button-hover-gradient: linear-gradient(135deg, #0072FF 0%, #00C6FF 100%);
+}
+
+/* 3. Base Styles
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-color: rgba(45, 45, 45, 0.8);
+    z-index: -1;
+}
+
+/* 4. Layout
+   ========================================================================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+/* 5. Typography
+   ========================================================================== */
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+    position: relative;
+}
+
+/* 6. Header & Navigation
+   ========================================================================== */
+header {
+    position: sticky;
+    top: 1rem;
+    z-index: 1000;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 3rem;
+    background: rgba(51, 51, 51, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-wrapper {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* 7. Main Content Sections
+   ========================================================================== */
+
+/* Welcome Section */
+.welcome {
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.greeting {
+    font-size: 3rem;
+}
+
+.name {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+    line-height: 0.8;
+}
+
+.title {
+    font-size: 2rem;
+    color: #cccccc;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #999999;
+    margin: 0.1rem;
+    line-height: 1.2;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.profile-img {
+    width: 400px;
+    height: 400px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=========================================================*/
+
+/* Skills Section */
+#skills {
+    margin-top: 50px; /* Reduce margin to avoid excessive scrolling */
+}
+
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    text-align: center;
+    gap: 70px; /* Spacing between skill categories */
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: row; /* Switch to row layout */
+        flex-wrap: wrap; /* Ensure wrapping if necessary */
+        justify-content: center; /* Center items */
+        align-items: flex-start; /* Align items to the top */
+    }
+}
+
+
+.skill-name {
+    margin-bottom: 25px; /* Adjust the spacing between text and the next icon */
+}
+
+
+
+/* 🔥 Ensures Each Skill Row is Centered */
+.skill-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+.skill-card {
+    padding: 2rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: rgba(45, 45, 45, 0.9);
+}
+
+
+/* 🔥 Icon + Text Stays Centered */
+.skill-item {
+    display: flex;
+    flex-direction: column; /* Icon stays above text */
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 🔥 Skill Icon Styling */
+.skill-icon {
+    font-size: 2.5rem; /* Adjust icon size */
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+.skill-card h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* 🔥 Skill Items Stay in a Grid Layout */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping when needed */
+    justify-content: center; /* Centers items */
+    align-items: center; /* Align vertically */
+    gap: 60px; /* Space between items */
+    width: 100%;
+    max-width: 1000px; /* Adjust width */
+}
+
+
+
+.skill-tag {
+    background: #e3f2fd;
+    color: #0984e3;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.skill-tag:hover {
+    background: #0984e3;
+    color: white;
+}
+
+
+.skill-item:hover .skill-icon {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    background-color: var(--accent-color); /* Highlight color */
+    color: white;
+}
+
+
+/*=========================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Projects Section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+    background-color: rgba(45, 45, 45, 0.9);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.app-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tech-icon {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.tech-icon i {
+    font-size: 24px !important;
+    width: 1em;
+    height: 1em;
+    color: #333;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a,
+.project-links a:visited {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.project-links a:hover {
+    color: #0056b3;
+}
+
+/* Languages Section */
+.languages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.language-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(45, 45, 45, 0.9);
+}
+
+.language-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--accent-color);
+    border-radius: 4px 0 0 4px;
+}
+
+.language-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.language-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.language-level {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Resume Section */
+#resume {
+    padding: 0;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px; /* Keeps timeline centered */
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Keeps the timeline line to the left */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--accent-color);
+    top: 0;
+    bottom: 0;
+    left: 50px; /* Keeps the timeline line in place */
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%; /* Ensures all items take up the same width */
+    display: flex;
+    justify-content: center; /* Centers the content boxes */
+    align-items: flex-start;
+    padding: 2rem 0;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    left: 42px; /* Aligns dots to the timeline line */
+    top: 20px;
+    border: 4px solid var(--bg-color);
+    box-shadow: 0 0 0 4px rgba(34, 171, 221, 0.3);
+}
+
+.timeline-content {
+    width: 600px; /* Ensures uniform width */
+    max-width: 600px; /* Prevents stretching */
+    min-width: 600px; /* Prevents shrinking */
+    padding: 1.5rem;
+    background-color: rgba(45, 45, 45, 0.9);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden; /* Prevents content overflow */
+    word-wrap: break-word; /* Forces long words to wrap */
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.timeline-content p,
+.timeline-details li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Fix uneven spacing */
+.timeline-details {
+    margin-top: 10px;
+    padding-left: 15px;
+    line-height: 1.4; /* Ensures consistent spacing */
+}
+
+/* --- Mobile & Small Screen Adjustments --- */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px; /* Adjusts timeline line */
+    }
+
+    .timeline-dot {
+        left: 22px; /* Adjusts dot alignment */
+    }
+
+    .timeline-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: unset; /* Allows proper scaling */
+        padding: 1rem;
+    }
+}
+
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.timeline-details li{
+    font-size: 1rem;
+}
+
+.timeline-details a {
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+.resume-buttons {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px; /* Controls spacing between buttons */
+    flex-wrap: wrap; /* Ensures proper alignment on small screens */
+    justify-content: center; /* Centers buttons horizontally */
+    align-items: center; /* Centers vertically */
+    width: 100%; /* Ensures full-width container */
+    text-align: center;
+}
+
+/* Ensures buttons have equal size and alignment */
+.download-cv,
+.copy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px; /* Fixed size for uniformity */
+    height: 60px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 30px;
+    background-image: var(--button-gradient);
+    color: white;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+/* Hover Effect */
+.download-cv:hover,
+.copy-button:hover {
+    background-image: var(--button-hover-gradient);
+    transform: translateY(-2px);
+}
+
+/* Ensures proper alignment of icons */
+.download-cv i,
+.copy-button i {
+    font-size: 20px;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px; /* Adjust space between stacked buttons */
+        align-items: center; /* Ensure proper centering */
+    }
+
+    .download-cv,
+    .copy-button {
+        width: 100%; /* Make buttons take full width on mobile */
+        max-width: 250px; /* Prevents excessive stretching */
+    }
+}
+
+
+
+
+
+/* Certificates Section */
+.certificates {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.certificate {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: rgba(45, 45, 45, 0.9);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.certificate:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.certificate:hover::after {
+    transform: scale(1.05);
+}
+
+.certificate h4 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding-right: 35px;
+}
+
+.certificate p {
+    color: var(--text-color);
+    margin: 0;
+}
+
+.certificate div{
+    display: flex;
+}
+
+.certificate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 40px 40px 0;
+    border-color: transparent var(--accent-color) transparent transparent;
+    box-shadow: 1px -1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: -0.5;
+}
+
+.certificate-btn{
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+/* 8. Footer
+   ========================================================================== */
+footer {
+    background-color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #333;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+
+
+.social-links .fa-linkedin {
+    font-size: 40px;
+    color: #1791d3; /* LinkedIn Blue */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.social-links .fa-linkedin:hover {
+    color: #0a6daf; /* Darker blue on hover */
+}
+
+.social-links .fa-github {
+    font-size: 40px;
+    color: #ffffff; /* Default white */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.social-links .fa-github:hover {
+    color: #888888; /* Light gray on hover */
+}
+
+
+
+
+
+
+/* 9. Utility Classes
+   ========================================================================== */
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+/* 10. Animations
+   ========================================================================== */
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    40% {
+        transform: translateY(-30px) rotate(45deg);
+    }
+    60% {
+        transform: translateY(-15px) rotate(45deg);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.wave {
+    display: inline-block;
+    animation: wave-animation 2.5s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+    10% {
+        transform: rotate(14.0deg)
+    }
+    20% {
+        transform: rotate(-8.0deg)
+    }
+    30% {
+        transform: rotate(14.0deg)
+    }
+    40% {
+        transform: rotate(-4.0deg)
+    }
+    50% {
+        transform: rotate(10.0deg)
+    }
+    60% {
+        transform: rotate(0.0deg)
+    }
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+/* Background Effects */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.bg {
+    animation: slide 5s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #2980b9 50%, #434343 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: 0.5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -2;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 10s;
+}
+
+.bg3 {
+    animation-duration: 15s;
+}
+
+/* 11. Media Queries
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        width: auto;
+        padding: 1rem 1rem;
+        position: absolute;
+    }
+
+    .header-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 50px;
+        left: 20px;
+        background-color: #333;
+        background-image: linear-gradient(315deg, #2d2d2d 0%, #000000 100%);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        border-radius: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        width: fit-content;
+        min-width: 200px;
+        z-index: -1;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .mobile-menu.active span:first-child {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .mobile-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu.active span:last-child {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    nav a {
+        width: 100%;
+        text-align: left;
+        padding: 0.75rem 1rem;
+    }
+
+    nav a.active {
+        background-color: var(--accent-color);
+        color: white;
+        font-weight: bold;
+    }
+
+    .welcome-content {
+        width: 90%;
+        gap: 0.5rem;
+    }
+
+    .welcome-content .greeting {
+        font-size: 1.5rem;
+    }
+
+    .welcome-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .welcome-content h2,
+    .welcome-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .welcome-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+/*=================================================================*/
+
+    .skills-grid {
+        display: flex; /* Aligns icons in a row */
+        flex-wrap: wrap; /* Allows wrapping if needed */
+        flex-direction: row !important;
+        justify-content: center; /* Centers items */
+        gap: 40px; /* Adds spacing between items */
+    }
+    
+/*=================================================================*/
+
+
+
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 22px;
+    }
+
+    .timeline-content {
+        margin: 0;
+    }
+
+    .languages {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate::after {
+        border-width: 0 40px 40px 0;
+    }
+
+    .certificate::before {
+        font-size: 12px;
+        top: 6px;
+        right: 6px;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .contact-container,
+    .resume-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .copy-button,
+    .download-cv {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .social-links a {
+        color: #333;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .social-links .fa-linkedin {
+        font-size: 40px;
+        color: #0077B5;
+    }
+
+    .social-links .fa-github {
+        font-size: 40px;
+        color: #ffffff;
+    }
+    .project-content {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .current-project-card {
+        flex-direction: column; /* Ensure the card content stacks vertically */
+        align-items: center; /* Center the card content */
+    }
+
+    .project-image {
+        margin: 0 0 20px 0; /* Remove right margin and add bottom margin */
+        width: 100%; /* Make the image responsive */
+    }
+
+    .current-project-card h3 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .current-project-card p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 768px), (hover: none) {
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* 12. Interactive Elements
+   ========================================================================== */
+.scroll-top-btn {
+    height: 45px;
+    width: 60px;
+    position: fixed;
+    bottom: calc(20px + var(--footer-height));
+    right: 20px;
+    padding: 5px 5px;
+    background-image: var(--button-gradient);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+    font-size: 1rem;
+}
+
+.scroll-top-btn:hover {
+    background-image: var(--button-hover-gradient);
+    transform: translateY(-2px);
+}
+
+.load-more-btn {
+    align-self: center;
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+    background-image: var(--button-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-image 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-image: var(--button-hover-gradient);
+    transform: translateY(-2px);
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact i {
+    color: #0077B5;
+}
+
+.contact a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #0077B5;
+    text-decoration: underline;
+}
+
+.scroll-indicator {
+    position: fixed;
+    top: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    animation: float 6s ease-in-out infinite;
+}
+
+.scroll-arrow {
+    width: 30px;
+    height: 30px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(70deg);
+    animation: bounce 3s infinite;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.read-more-btn {
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #2d2d2d;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    color: #0984e3;
+    margin-bottom: 30px;
+}
+
+.modal-content h3 {
+    color: #0984e3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-content ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.modal-content li {
+    margin-bottom: 5px;
+}
+
+.view-project-btn {
+    display: inline-block;
+    background-color: #0984e3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.view-project-btn:hover {
+    background-color: #0056b3;
+}
+
+.modal-short-description {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.modal-separator {
+    border: 0;
+    height: 1px;
+    background-color: #888;
+    margin: 20px 0;
+}
+
+.modal-long-description {
+    line-height: 1.6;
+}
+
+/*.project-card[data-project="ecoal23"] {
+    background:
+            linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, #333333 50%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 20%),
+            url('assets/images/eCoal23/Home.png') 0 0 / cover no-repeat;
+}*/
+
+.current-project {
+    width: 100%;
+}
+.project-content {
+    display: flex;
+}
+
+.current-project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+    background-color: rgba(45, 45, 45, 0.9);
+    border-radius: 30px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current-project-card:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+ }
+
+.current-project-card p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+.current-project-card h3 {
+    margin: 0;
+    font-size: 2rem;
+}
+.project-text {
+    color: white;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.project-image {
+    margin-right: 20px;
+    height: 300px;
+    border-radius: 30px;
+}
+
+
+
+
+
+a {
+    color: #ffffff; /* Set your desired color */
+}
+
+a:visited {
+    color: #ffffff; /* Ensures the color doesn't change after clicking */
+}
+
+
+
+
+.call-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Circle button size */
+    height: 40px;
+    background-color: #138d25; /* Default green */
+    color: white; /* Ensures icon is white */
+    border-radius: 50%; /* Makes it a circle */
+    text-decoration: none;
+    font-size: 20px; /* Adjust icon size */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Phone icon stays white initially */
+.call-button i {
+    font-size: 20px; /* Ensure icon size consistency */
+    color: white;
+    transition: color 0.3s ease; /* Smooth icon transition */
+}
+
+/* Hover effect: Matches LinkedIn & GitHub button styles */
+.call-button:hover {
+    background-color: #147529; /* Darker green on hover */
+}
+
+/* Smooth icon color transition on hover */
+.call-button:hover i {
+    color: #c0c0c0; /* Light gray on hover, matching GitHub */
+}
+
+
+
+
+
+
+#experience img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+
+#education img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+
+
+#aboutme h2 {
+    text-align: left; /* Left align on desktop */
+}
+
+/* Center it on mobile screens */
+@media (max-width: 768px) {
+    #aboutme h2 {
+        text-align: center !important; /* Force center alignment on smaller screens */
+    }
+}
+
+
+.skills-box {
+    background-color: rgba(45, 45, 45, 0.9); /* Match other sections */
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* Hover Effect */
+.skills-box:hover {
+    transform: translateY(-5px); /* Moves box slightly up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Adds hover shadow effect */
+}
+
+
+
+/* Default (Desktop) Styles */
+.timeline-content h3 {
+    font-size: 1.5rem; /* Standard size */
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left; /* Ensures left alignment */
+    word-break: break-word; /* Prevents text overflow */
+}
+
+/* Adjust for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .timeline-content h3 {
+        font-size: 1.3rem; /* Slightly smaller */
+    }
+}
+
+/* Adjust for mobile and very small screens */
+@media (max-width: 768px) {
+    .timeline-content h3 {
+        font-size: 1.1rem; /* Smaller font size */
+        line-height: 1.4; /* Adds spacing between lines */
+    }
+}
+
+/* Ensures text remains left-aligned on all screen sizes */
+@media (max-width: 480px) {
+    .timeline-content h3 {
+        font-size: 1rem; /* Even smaller for very small screens */
+    }
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+/* Tab Container */
+.tab-container {
+    margin: 2rem 0;
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Tab Buttons */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    background: #333;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+  }
+  
+  .tab-button:hover,
+  .tab-button.active {
+    background: #444;
+  }
+  
+  /* Tab Content */
+  .tab-content {
+    padding: 1rem;
+    background: #222;
+  }
+  
+  .tab-panel {
+    display: none;
+  }
+  
+  .tab-panel.active {
+    display: block;
+  }
+  
+
+
+
+
+
+/* Timeline container: no left padding */
+.timeline {
+    position: relative;
+}
+
+/* Vertical line at 40px from the left of the container */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;   /* vertical line position */
+    width: 2px;
+    background: #fff;
+}
+
+/* Each timeline item is shifted right so its content doesn't overlap the line */
+.timeline-item {
+    position: relative;
+    margin-left: 60px;   /* Shift timeline items to the right */
+    margin-bottom: -2rem;
+}
+
+/* Dot positioned so that its center aligns exactly with the vertical line */
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    left: -28px;  /* Calculated so that 60 + (-28) + 8 = 40px */
+    top: 55px;    /* Adjust vertical alignment as needed */
+}
+
+  
+
+
+
+
+
+
+
+
+
+  
+  .timeline-content {
+    margin-left: -120px;
+    padding: 2rem;
+    background: #444;
+    border-radius: 15px;
+  }
+  
+  .timeline-date h4 {
+    color: #ccc;
+    margin: 0;
+  }
+  
+  .timeline-details {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .timeline-details li {
+    text-align: center;
+    flex: 0 0 auto;
+    width: 150px;
+    margin: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  .timeline-details i {
+    font-size: 2rem;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+
+
+
+
+@media (max-width: 768px) {
+  /* Adjust the timeline line position */
+  .timeline::before {
+    left: 30px !important;
+  }
+  /* Adjust timeline items margin for mobile */
+  .timeline-item {
+    margin-left: 50px !important;
+  }
+  /* Adjust the dot so that its center aligns with the timeline line.
+     Calculation: margin-left (50px) + dot's left offset + half dot width (8px) should equal 30px.
+     Thus, dot's left offset = 30 - 50 - 8 = -28px */
+  .timeline-dot {
+    left: -28px !important;
+  }
+}
+
+
+
+
+.timeline-details {
+    list-style: disc; /* or none if you prefer no bullets */
+    padding-left: 20px; /* gives some left indent */
+    margin-top: 10px;
+    text-align: left; /* align text to the left */
+    display: block; /* make sure it doesn't use flex */
+  }
+  
+  .timeline-details li {
+    margin-bottom: 5px;
+    text-align: left; /* ensure each list item is left-aligned */
+  }
+  
+
+
+  .tab-container {
+    margin: 2rem 0;
+    background: #222;
+    border-radius: 25px; /* Adjust this value as needed */
+    overflow: hidden;
+  }
+  
+
+  .tab-content,
+  .tab-panel {
+    border-radius: 25px; /* Ensures the inner content also has rounded corners */
+  }
+  
+
+  .experience-btn,
+.education-btn {
+  transition: background-color 0.3s ease 0.2s; /* Adjust timing as needed */
+}
+
+
+
+.experience-box,
+.education-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+  
+.experience-box:hover,
+.education-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+
+
+
+.timeline-details li {
+  font-weight: normal;
+  margin: 5px 0;      /* reduce the vertical spacing */
+  text-align: left;   /* align text to the left */
+  width: auto;        /* let the list items take natural width */
+  flex: none;         /* remove flex properties if not needed */
+}
+
+
+
+.timeline-date {
+  position: absolute;
+  top: 15px;    /* move down; adjust this value as needed */
+  z-index: 10;
+}
+  
+.timeline-date h4 {
+    display: inline-block;
+    padding: 0.2em 0.4em;  /* Reduced padding */
+    font-size: 0.9em;      /* Slightly smaller text */
+    border: 2px solid var(--accent-color);
+    border-radius: 50px;
+    margin: -10px 0 0 0;
+    background-color: rgba(45, 45, 45, 0.9);
+    color: var(--text-color);
+  }
+  
+  
+  /*
+  .timeline-date::before {
+    content: "";
+    position: absolute;
+    top: 40%;                /* Vertically center the line */
+    /* right: 100%;             /* Position the line immediately to the left of the date oval */
+    /* margin-top: -1px;        /* Half of the line's height (2px) to center it */
+    /* width: 85px;             /* Length of the connecting line */
+    /* height: 2px;             /* Thickness of the connecting line */
+    /*background-color: var(--accent-color);
+    z-index: 11;
+  }
+
+  .timeline-content {
+    position: relative;
+    overflow: visible; /* allow content (like our connecting line) to be visible outside */
+  
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px; /* Adjust as needed */
+    width: 2px;
+    background-color: var(--accent-color);
+  }
+
+
+
+
+  .timeline-dot {
+  width: 20px;
+  height: 20px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;          /* Lower this value to move the dots higher */
+  border: 4px solid var(--bg-color);
+  box-shadow: 0 0 0 4px rgba(34, 171, 221, 0.3);
+  z-index: 12;        /* Higher z-index to overlay the line from the dates */
+}
+
+
+
+
+/**
+.timeline-date::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    height: 2px;
+    background-color: var(--accent-color);
+    z-index: 11;
+  }
+  
+
+  .timeline-date::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    width: clamp(60px, 6vw, 120px); /* adjust as needed */
+   /* height: 2px; /* sets the thickness of the line */
+
+
+  
+  
+  
+  .timeline-dot-date {
+    display: flex;
+    align-items: center;
+  }
+  
+  .timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: 4px solid var(--bg-color);
+    box-shadow: 0 0 0 4px rgba(34, 171, 221, 0.3);
+    flex-shrink: 0;
+  }
+  
+  .timeline-connector {
+    flex-grow: 1;
+    height: 2px;
+    background: repeating-linear-gradient(
+      to right,
+      var(--accent-color),
+      var(--accent-color) 4px,
+      transparent 4px,
+      transparent 8px
+    );
+    margin: 0 5px;  /* Adjust spacing between the dot and the date if needed */
+  }
+  
+  .timeline-date h4 {
+    display: inline-block;
+    padding: 0.2em 0.4em;
+    border: 2px solid var(--accent-color);
+    border-radius: 50px;
+    background-color: rgb(45, 45, 45);
+    color: var(--text-color);
+    margin: 0;
+    white-space: nowrap; /* Prevents the text from wrapping */
+  }
+  
+
+
+  
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px; /* Adjust the horizontal position as needed */
+  width: 2px; /* Thickness of the line */
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--accent-color),
+    var(--accent-color) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+  
+
+
+
+
+
+  
+.timeline-content {
+    margin-left: -120px;
+    padding: 2rem;
+    background: #444;
+    border-radius: 15px;
+  }
+  
+/* For tablet sizes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .timeline-content {
+    margin-left: -40px;  /* Adjust as needed */
+  }
+}
+
+/* For small desktop sizes */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .timeline-content {
+    margin-left: -80px;  /* Intermediate spacing */
+  }
+}
+
+/* For larger screens */
+@media (min-width: 1441px) {
+  .timeline-content {
+    margin-left: -120px;  /* Original spacing */
+  }
+}
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  /* Flex container for each timeline item */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem; /* space between timeline items */
+  }
+  
+  /* The timeline dot */
+  .timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  /* The connector that automatically fills the space */
+  .timeline-connector {
+    flex-grow: 1;
+    margin: 0 10px; /* space between dot and date bubble */
+    border-top: 2px dashed var(--accent-color);
+  }
+  
+  /* The date bubble */
+  .timeline-date h4 {
+    margin: 0;
+  }
+  
+
+
+
+  timeline-dot {
+    position: relative;
+    z-index: 2; /* Ensures the dot is above its pseudo-element */
+}
+
+
+.timeline-dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Positions it immediately to the right of the dot */
+    width: 50px; /* Adjust length as needed */
+    border-top: 2px dashed var(--accent-color);
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+
+
+
+
+.timeline-dot {
+    z-index: 10; /* Ensure the dot stays on top */
+}
+
+
+.timeline-dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Start right at the edge of the dot */
+    width: 150px; /* Adjust this value to match the distance to the date bubble */
+    border-top: 2px dashed var(--accent-color); /* Matching thickness */
+    transform: translateY(-50%);
+    z-index: 10; /* Places the dashed line behind the dot */
+}
+
+
+/* Ensure the date bubble is on top */
+.timeline-date {
+    z-index: 20;
+}
+
+
+
+
+.experience-box:hover,
+.education-box:hover,
+.timeline-content:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+
+
+
+:root {
+    --timeline-thickness: 2px;   /* Thickness of the timeline */
+    --dash-length: 6px;          /* How long each dash is */
+    --dash-gap: 6px;             /* How long the gap is between dashes */
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px; /* Adjust position as needed */
+    width: var(--timeline-thickness);
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--accent-color),
+      var(--accent-color) var(--dash-length),
+      transparent var(--dash-length),
+      transparent calc(var(--dash-length) + var(--dash-gap))
+    );
+  }
+  
+
+
+
+.timeline-dot {
+    background-color: var(--accent-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #dae0e6;
+}

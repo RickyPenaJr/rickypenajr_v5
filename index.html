@@ -1,0 +1,1158 @@
+<!---------------------------
+Creator: Ricky Peña Jr.
+GitHub Account: (RickyPenaJr) 
+Purpose: Display Portfolio
+-----------------------------
+
+
+-----------------------------------------
+VERSION: 5.2.0 (Updated: March 09, 2025)
+-----------------------------------------
+
+
+-----------------------------------------------------------------------------------
+VERSION GUIDE EXAMPLE: 
+
+Version 6.0 → A major version with new core functionality or architecture changes.
+Version 6.1 → An update adding new features while keeping the core system the same.
+Version 6.1.1 → A small fix or improvement without adding new features
+-----------------------------------------------------------------------------------
+
+
+
+
+<! -----BEGINNING DOCUMENT----->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="theme-color" content="#000000">
+    <title>Ricky Peña Jr.</title>
+    <link href="assets/style.css" rel="stylesheet">
+    <script src="assets/app.js"></script>
+</head>
+
+
+
+
+<!-- FAVICON LINK-->
+
+
+<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192x192.png"/>
+<link rel="icon" type="image/png" sizes="512x512" href="favicon/favicon-512x512.png"/>
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="shortcut icon" href="favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="favicon/site.webmanifest" />
+
+
+  <link rel="stylesheet" href="np2.css" media="screen">
+<link rel="stylesheet" href="index.css" media="screen">
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="np.js" defer=""></script>
+  <meta name="generator" content="Nicepage 7.0.3, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V27LHDVK46"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-V27LHDVK46');
+</script>
+<body>
+<div class="bg-overlay"></div>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="header-wrapper">
+    <header>
+        <button aria-label="Toggle menu" class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <a href="#aboutme">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#Resume">Resume</a>
+            <a href="#certificates">Certificates</a>
+
+
+        </nav>
+    </header>
+</div>
+<main>
+    <section class="welcome">
+        <div class="welcome-content">
+            <div class="greeting">
+                <span class="wave">👋</span> Hi, I'm <span class="wave">👋</span>
+            </div>
+            <h1 class="name">Ricky Peña Jr.</h1>
+            <h2 class="title">IT Consultant & Data Analyst</h2>
+            <h3 class="subtitle"><i class="fa fa-map-marker-alt" style="margin-right: 4px;"></i> Based in Houston, TX</h3>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <br>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+    <br>
+    <section class="profile-section fade-in" id="aboutme">
+        <img alt="Ricky Pena"
+             class="profile-img"
+             src="images/headshot.jpg">
+        <div>
+
+
+
+
+            <h2>About Me</h2>
+            <p>I began my interest for Data Science while pursuing my undergrad in MIS & Finance at the University of Houston and through internship opportunities where I was able to apply it to real-world scenarios.</p>
+            <p>I've created this portfolio to showcase my projects; If you've found yourself here, feel free to explore.&nbsp;🚀</p>
+            <div class="contact-container">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/rickypenajr/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/rickypenajr" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="tel:+12819758340" class="call-button"><i class="fas fa-phone"></i></a>
+                </div>
+            
+            
+                <div class="button-container">
+                    <button class="copy-button" onclick="copyEmail()">
+                        <i class="fas fa-envelope"></i>
+                        rickypenajr@gmail.com
+                    </button>
+            
+                    <a class="download-cv" download href="pdfs/Ricardo_Pena_Resume.pdf">
+                        <i class="fas fa-download"></i>Resume
+                    </a>
+                </div>
+            </div>
+            
+
+
+
+
+
+        <!-- SKILLS-->
+
+
+    </section>
+    
+    <section class="fade-in" id="skills">
+        <div class="skills-box">
+
+
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-container">
+
+
+
+
+
+          <!-- Languages -->
+          <div class="skill-category">
+            <h3 class="category-title">Languages</h3>
+
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <span class="skill-name">HTML 5</span>
+                </div>
+
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <span class="skill-name">CSS 3</span>
+                </div>
+
+                
+                <div class="skill-item">
+                    <i class="fab fa-js skill-icon"></i>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+
+
+                <div class="skill-item">
+                    <i class="fab fa-java skill-icon"></i>
+                    <span class="skill-name">Java</span>
+                </div>
+
+
+                <div class="skill-item">
+                    <i class="fab fa-python skill-icon"></i>
+                    <span class="skill-name">Python</span>
+                </div>
+
+
+                <div class="skill-item">
+                    <i class="fas fa-chart-line skill-icon"></i>
+                    <span class="skill-name">R</span>
+                </div>
+
+
+            
+            </div>
+        </div>
+
+
+
+
+       <!-- Tools -->
+       <div class="skill-category">
+        <h3 class="category-title">Tools</h3>
+
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fas fa-chart-bar skill-icon"></i>
+                <span class="skill-name">Power BI</span>
+            </div>
+
+
+            <div class="skill-item">
+                <i class="fas fa-chart-pie skill-icon"></i>
+                <span class="skill-name">Tableau</span>
+            </div>
+
+
+            <div class="skill-item">
+                <i class="fab fa-google skill-icon"></i>
+                <span class="skill-name">Google<br>Colab</span>
+            </div>
+
+
+            <div class="skill-item">
+                <i class="fas fa-code skill-icon"></i>
+                <span class="skill-name">VS Code</span>
+            </div>
+
+
+            <div class="skill-item">
+                <i class="fas fa-book skill-icon"></i>
+                <span class="skill-name">Jupyter<br>Notebook</span>
+            </div>
+
+
+            <div class="skill-item">
+                <i class="fas fa-sitemap skill-icon"></i>
+                <span class="skill-name">Visio</span>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+                <!-- Libraries -->
+                <div class="skill-category">
+                    <h3 class="category-title">Libraries</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-table skill-icon"></i>
+                            <span class="skill-name">Pandas</span>
+                        </div>
+
+
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar skill-icon"></i>
+                            <span class="skill-name">Matplotlib</span>
+                        </div>
+
+
+                        <div class="skill-item">
+                            <i class="fas fa-square-root-variable skill-icon"></i>
+                            <span class="skill-name">NumPy</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            <!-- Databases -->
+            <div class="skill-category">
+                <h3 class="category-title">Databases</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-database skill-icon"></i>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-table skill-icon"></i>
+                        <span class="skill-name">SQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-microsoft skill-icon"></i>
+                        <span class="skill-name">Microsoft<br>Access</span>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- PROJECTS -->
+
+
+
+
+        <!-- Projects-->
+        <section class="fade-in" id="projects">
+            <h2>Projects</h2>
+            <h3>Past Projects</h3>
+    
+        <div class="projects">
+
+
+
+
+            <!-- Project #1 (Read More Button) -->
+            <div class="project-card" data-project="project-1">
+                <h3>Project #1</h3>
+                <p>Enter Text Here...</p>
+                <div class="tech-stack">
+                    <span class="tech-icon"><i class="fab fa-react tech-icon"></i></span>
+                    <span class="tech-icon"><i class="fab fa-laravel tech-icon"></i></span>
+                    <span class="tech-icon"><i class="fab fa-figma tech-icon"></i></span>
+                </div>
+                <div class="project-links">
+                    <button class="read-more-btn">Read More</button>
+                </div>
+            </div>
+
+
+
+
+            <!-- Project #2 (Read More Button) -->
+            <div class="project-card" data-project="project-2">
+                <h3>Project #2</h3>
+                <p>Enter Text Here...</p>
+                <div class="tech-stack">
+                    <span class="tech-icon"><i class="fab fa-figma tech-icon"></i></span>
+                </div>
+                <div class="project-links">
+                    <button class="read-more-btn">Read More</button>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Project #3 (Read More Button) -->
+            <div class="project-card" data-project="project-3">
+                <h3>Project #3</h3>
+                <p>Enter Text Here...</p>
+                <div class="tech-stack">
+                    <span class="tech-icon"><i class="fas fa-vr-cardboard tech-icon"></i></span>
+                </div>
+                <div class="project-links">
+                    <button class="read-more-btn">Read More</button>
+                </div>
+            </div>
+
+
+
+
+            <!-- Project #4 (Read More Button) -->
+            <div class="project-card" data-project="project-4">
+                <h3>Project #4</h3>
+                <p>Enter Text Here...</p>
+                <div class="tech-stack">
+                    <span class="tech-icon"><i class="fas fa-gamepad tech-icon"></i></span>
+                    <span class="tech-icon"><i class="fas fa-vr-cardboard tech-icon"></i></span>
+                </div>
+                <div class="project-links">
+                    <button class="read-more-btn">Read More</button>
+                </div>
+            </div>
+
+
+
+
+            <div class="project-card" data-project="project-5">
+                <h3>Project #5</h3>
+                <p>Enter Text Here...</p>
+                <div class="tech-stack">
+                    <span class="tech-icon"><i class="fab fa-react tech-icon"></i></span>
+                    <span class="tech-icon"><i class="fab fa-css3-alt tech-icon"></i></span>
+                </div>
+                <div class="project-links">
+                    <button class="read-more-btn">Read More</button>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="project-card" data-project="project-6">
+                <h3>Project #6</h3>
+                <p>Enter Text Here...</p>
+                <div class="tech-stack">
+                    <span class="tech-icon"><i class="fab fa-html5 tech-icon"></i></span>
+                    <span class="tech-icon"><i class="fab fa-css3-alt tech-icon"></i></span>
+                    <span class="tech-icon"><i class="fab fa-js tech-icon"></i></span>
+                </div>
+                <div class="project-links">
+                    <button class="read-more-btn">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+<!-- Combined Experience & Education Section -->
+<section class="fade-in" id="Resume">
+    <h2 class="section-title">Resume</h2>
+    <div class="tab-container">
+      <!-- Tab Buttons -->
+      <div class="tabs">
+        <button class="tab-button active" data-tab="experience-tab">Experience</button>
+        <button class="tab-button" data-tab="education-tab">Education</button>
+      </div>
+
+
+
+
+
+
+      <!-- LOGO EDITS FOR MOBILE-->
+
+      <style>
+        /* Media query for phones */
+        @media (max-width: 600px) {
+          /* This targets all images within timeline content */
+          .timeline-content img {
+            margin: 20px 5px 20px 1px !important; /* TOP / RIGHT / BOTTOM / LEFT */
+            display: block;
+          }
+        }
+      </style>
+
+
+    <style>
+        @media (max-width: 600px) {
+        img[alt="Texas Bay Credit Union Logo"] {
+            max-width: 150px !important;
+            margin-bottom: 20px !important;
+            margin-top: -5px !important;
+        }
+        }
+    </style>
+
+<style>
+    @media (max-width: 600px) {
+    /* Targeting the Eagle Tech logo by its alt attribute */
+    img[alt="Eagle Tech Logo"] {
+        max-width: 150px !important;
+        margin-bottom: 25px !important;
+        margin-top: -5px !important;
+
+    }
+    }
+</style>
+
+
+<style>
+    @media (max-width: 600px) {
+    /* Targets the University of Houston logo using its alt attribute */
+    img[alt="University Logo"] {
+        margin-bottom: 10px !important;
+        margin-top: 1px !important;
+    }
+    }
+</style>
+<!-- LOGO EDITS FOR MOBILE-->
+
+
+
+
+
+      
+      <!-- Tab Panels -->
+      <div class="tab-content">
+        <!-- Experience Tab -->
+        <div id="experience-tab" class="tab-panel active">
+          <div class="timeline">
+            <!-- Protiviti -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">
+                  <h4 style="margin-top: -10px;">&nbsp;June 2024 - Aug. 2024&nbsp;</h4>
+                </div>
+                <img src="images/protiviti_logo.png" alt="Protiviti Logo" style="max-width: 280px; width: 100%; height: auto; margin: 20px -15px 1px;">
+                <h3 style="margin: 0;">IT Consultant Intern - <a href="https://protiviti.com/" target="_blank">Protiviti</a></h3>
+                <h4 style="margin: 5px 0 50px; font-weight: normal;">
+                  <i class="fa fa-map-marker-alt" style="color: #ffffff; margin-right: 2px;"></i> Houston, TX
+                </h4>
+                <ul class="timeline-details">
+                  <li>Enter Text Here...</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Tenaris -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">
+                  <h4 style="margin-top: -10px;">&nbsp;Jan. 2024 - July 2024&nbsp;</h4>
+                </div>
+                <img src="images/tenaris_logo.png" alt="Tenaris Logo" style="max-width: 280px; width: 100%; height: auto; margin: 20px -10px 10px;">
+                <h3 style="margin: 0;">Audit Data Science Intern - <a href="https://tenaris.com/" target="_blank">Tenaris</a></h3>
+                <h4 style="margin: 5px 0 50px; font-weight: normal;">
+                  <i class="fa fa-map-marker-alt" style="color: #ffffff; margin-right: 2px;"></i> Houston, TX
+                </h4>
+                <ul class="timeline-details">
+                  <li>Enter Text Here...</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- HPE -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">
+                  <h4 style="margin-top: -10px;">&nbsp;Jan. 2024 - May 2024&nbsp;</h4>
+                </div>
+                <img src="images/hpe_logo.png" alt="HPE Logo" style="max-width: 280px; width: 100%; height: auto; margin: 30px 10px 10px;">
+                <h3 style="margin: 0;">IT Student Consultant - <a href="https://hpe.com/" target="_blank">HPE</a></h3>
+                <h4 style="margin: 5px 0 50px; font-weight: normal;">
+                  <i class="fa fa-map-marker-alt" style="color: #ffffff; margin-right: 2px;"></i> Spring, TX
+                </h4>
+                <ul class="timeline-details">
+                  <li>Enter Text Here...</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Texas Bay Credit Union -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">
+                  <h4 style="margin-top: -10px;">&nbsp;June 2023 - Aug. 2023&nbsp;</h4>
+                </div>
+                <img src="images/texasbay_logo3.png" alt="Texas Bay Credit Union Logo" style="max-width: 275px; width: 100%; height: auto; margin: 40px 5px 25px;">
+                <h3 style="margin: 0;">Finance Intern - <a href="https://texasbaycu.org/" target="_blank">Texas Bay CU</a></h3>
+                <h4 style="margin: 5px 0 50px; font-weight: normal;">
+                  <i class="fa fa-map-marker-alt" style="color: #ffffff; margin-right: 2px;"></i> Richmond, TX
+                </h4>
+                <ul class="timeline-details">
+                  <li>Enter Text Here...</li>
+                </ul>
+              </div>
+            </div>
+
+
+
+                 <!-- Eagle Tech Supply -->
+                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <div class="timeline-date">
+                        <h4 style="margin-top: -10px;">&nbsp;Jan. 2023 - May 2023&nbsp;</h4>
+                      </div>
+                      <img src="images/eagle_logo.png" alt="Eagle Tech Logo" style="max-width: 225px; width: 100%; height: auto; margin: 40px 10px 25px;">
+                      <h3 style="margin: 0;">Business Analyst - <a href="https://eagletechsupply.com/" target="_blank">Eagle Tech Supply, Inc.</a></h3>
+                      <h4 style="margin: 5px 0 50px; font-weight: normal;">
+                        <i class="fa fa-map-marker-alt" style="color: #ffffff; margin-right: 2px;"></i> Houston, TX
+                      </h4>
+                      <ul class="timeline-details">
+                        <li>Enter Text Here...</li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+        
+
+
+
+        
+        <!-- Education Tab -->
+        <div id="education-tab" class="tab-panel">
+          <div class="timeline">
+            <!-- University of Houston -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                
+
+
+
+
+
+
+
+
+                <div class="timeline-date">
+                  <h4 style="margin-top: -10px;">&nbsp;June 2021 - Dec. 2024&nbsp;</h4>
+                </div>
+                <img src="images/uh_logo5.png" alt="University Logo" style="max-width: 325px; width: 100%; height: auto; margin: -10px 5px -25px;">
+                <h3 style="margin: 0;">BBA in MIS &amp; Finance - <a href="https://uh.edu/" target="_blank">University of Houston</a></h3>
+                <h4 style="margin: 5px 0 50px; font-weight: normal;">
+                  <i class="fa fa-map-marker-alt" style="color: #ffffff; margin-right: 2px;"></i> Houston, TX
+                </h4>
+                <ul class="timeline-details">
+                  <li>Web Development</li>
+                  <li>Object Oriented Programming</li>
+                  <li>Business Statistics</li>
+                  <li>Database Management</li>
+                  <li>IT Project Management</li>
+                  <li>Risk &amp; Financial Management</li>
+
+
+
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End of tab-content -->
+    </div><!-- End of tab-container -->
+  </section>
+  
+
+
+
+
+
+
+         <!--------- CERTIFICATES --------->
+
+
+         <section class="fade-in" id="certificates">
+            <h2 class="section-title">Certificates</h2>
+
+
+
+
+
+            <!-- Certificate #1-->
+
+
+            <div class="certificate">
+                <h4>Certification 1</h4>
+                <p>Provider - Completed in Month/Year</p>
+                <div>
+                    <a class="certificate-btn" download href="enter pdf here">
+                        <i class="fas fa-download"></i>See Certificate</a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- Certificate #2 -->
+
+            <div class="certificate">
+                <h4>Certification 2</h4>
+                <p>Provider - Completed in Month/Year</p>
+                <div>
+                    <a class="certificate-btn" download
+                       href="enter pdf here">
+                        <i class="fas fa-download"></i>See Certificate</a>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Certificate #3 -->
+
+            <div class="certificate">
+                <h4>Certification 3</h4>
+                <p>Provider - Completed in Month/Year</p>
+                <div>
+                    <a class="certificate-btn" download href="enter pdf here">
+                        <i class="fas fa-download"></i>See Certificate</a>
+                </div>
+            </div>
+
+        
+
+
+
+
+
+
+
+            <!-- More Certificates (HIDDEN)-->
+            <div class="hidden" id="more-certificates">
+
+
+
+                  <!-- Certificate #4 -->
+                <div class="certificate">
+                    <h4>Certification 4</h4>
+                    <p>Provider - Completed in Month/Year</p>
+                    <div>
+                        <a class="certificate-btn" download
+                        href="enter pdf here">
+                            <i class="fas fa-download"></i>See Certificate</a>
+                    </div>
+                </div>
+
+
+
+
+
+                  <!-- Certificate #5 -->
+                <div class="certificate">
+                    <h4>Certification 5</h4>
+                    <p>Provider - Completed in Month/Year</p>
+                    <div>
+                        <a class="certificate-btn" download
+                           href="enter pdf here">
+                            <i class="fas fa-download"></i>See Certificate</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+                <button class="load-more-btn" id="load-more">Load More</button>
+            </div>
+            
+
+
+
+
+        </div>
+    </section>
+</main>
+
+
+
+
+<!-- ====================================================================== -->
+
+
+
+<!-- Project #1 (Read More Button) -->
+<div class="modal" id="modal-ecoal23">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Text</h2>
+        <a class="view-project-btn" href="EnterLinkHere" target="_blank">View Project</a>
+
+
+
+<!-- Project 1 - Description -->
+        <p class="modal-short-description">Text</p>
+        <hr class="modal-separator">
+        <div class="modal-long-description">
+            <p>Enter Text Here...</p>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <p>Text</p>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+<!-- Project 1 - Description -->
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ====================================================================== -->
+
+
+
+<!-- Project #2 (Read More Button) -->
+<div class="modal" id="modal-eco-city">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Text/h2>
+        <a class="view-project-btn" href="Enter Link Here" target="_blank">View Project</a>
+
+
+
+<!-- Project 2 - Description -->
+        <p class="modal-short-description">Text</p>
+        <hr class="modal-separator">
+        <div class="modal-long-description">
+            <p>Text</p>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <p>Text</p>
+            <h3>Text</h3>
+            <p>Text</p>
+<!-- Project 2 - Description -->
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ====================================================================== -->
+
+
+
+<!-- Project #3 (Read More Button) -->
+<div class="modal" id="modal-fiica">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Text</h2>
+        <a class="view-project-btn" href="Enter Link Here" target="_blank">View Project</a>
+
+
+
+
+
+
+<!-- Project 3 - Description -->
+        <p class="modal-short-description">Text</p>
+        <hr class="modal-separator">
+        <div class="modal-long-description">
+            <p>Text</p>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <p>Text</p>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+<!-- Project 3 - Description -->
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ====================================================================== -->
+
+
+
+<!-- Project #4 (Read More Button) -->
+<div class="modal" id="modal-inclusive-internationalization">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Text</h2>
+        <a class="view-project-btn" href="enter link here" target="_blank">View Project</a>
+
+
+
+
+
+
+<!-- Project 4 - Description -->
+        <a class="view-project-btn" href="Enter Link Here" target="_blank">View Project</a>
+        <p class="modal-short-description">Text</p>
+        <hr class="modal-separator">
+        <div class="modal-long-description">
+            <p>Text</p>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <p>Text</p>
+            <h3>Text</h3>
+            <p>Text</p>
+<!-- Project 4 - Description -->
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- ====================================================================== -->
+
+
+
+
+
+
+<!-- Project #5 (Read More Button) -->
+<div class="modal" id="modal-pokedex">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Text</h2>
+        <a class="view-project-btn" href="enter link here" target="_blank">View Project</a>
+
+
+
+
+
+<!-- Project 5 - Description -->
+        <p class="modal-short-description">Text.</p>
+        <hr class="modal-separator">
+        <div class="modal-long-description">
+            <p>Text</p>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <p>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+<!-- Project 5 - Description -->
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- ====================================================================== -->
+
+
+
+
+
+<!-- Project #6 (Read More Button) -->
+<div class="modal" id="modal-blackjack">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Text</h2>
+        <a class="view-project-btn" href="Enter Link Here" target="_blank">View Project</a>
+
+
+
+
+
+
+<!-- Project 6 - Description -->
+        <p class="modal-short-description">Text.</p>
+        <hr class="modal-separator">
+        <div class="modal-long-description">
+            <p>Text</p>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+            <h3>Text</h3>
+            <p>Text</p>
+            <h3>Text</h3>
+            <ul>
+                <li>Text</li>
+                <li>Text</li>
+                <li>Text</li>
+            </ul>
+<!-- Project 6 - Description -->
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2025 Ricky Peña Jr. <br>
+        All Rights Reserved.</p>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/rickypenajr/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/rickypenajr" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="tel:+12819758340" class="call-button"><i class="fas fa-phone"></i></a>
+
+    </div>
+</footer>
+
+<!-- FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Script Last Minute Edit -->
+
+<script>
+    // Select all tab buttons and panels
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+  
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active classes from all buttons and panels
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabPanels.forEach(panel => panel.classList.remove('active'));
+        
+        // Add active class to the clicked button and corresponding panel
+        button.classList.add('active');
+        const targetPanel = document.getElementById(button.getAttribute('data-tab'));
+        targetPanel.classList.add('active');
+      });
+    });
+  </script>
+
+
+
+<script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  </script>
+  
+  <!-- Script Last Minute Edit -->
+
+
+
+</body>
+</html>
